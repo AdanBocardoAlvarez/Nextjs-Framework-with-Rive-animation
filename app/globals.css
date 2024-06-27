@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat" !important;
+  transition: 0.5s;
+  margin: 0;
+}
+
+.sidebar-open {
+  @apply h-screen overflow-hidden;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+@font-face {
+  font-family: "intro_black";
+
+  src: url("/fonts/intro_black-webfont.eot");
+
+  src: url("/fonts/intro_black-webfontd41d.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/intro_black-webfont.woff2") format("woff2"),
+    url("/fonts/intro_black-webfont.woff") format("woff"),
+    url("/fonts/intro_black-webfont.ttf") format("truetype"),
+    url("/fonts/intro_black-webfont.svg#intro_blackregular") format("svg");
+
+  font-weight: normal;
+
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "intro_black_altregular";
+
+  src: url("/fonts/intro-black-alt-webfont.eot");
+
+  src: url("/fonts/intro-black-alt-webfontd41d.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/intro-black-alt-webfont.woff2") format("woff2"),
+    url("/fonts/intro-black-alt-webfont.woff") format("woff"),
+    url("/fonts/intro-black-alt-webfont.ttf") format("truetype"),
+    url("/fonts/intro-black-alt-webfont.svg#intro_black_altregular")
+      format("svg");
+
+  font-weight: normal;
+
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "intro_lightregular";
+
+  src: url("/fonts/intro-light-webfont.eot");
+
+  src: url("/fonts/intro-light-webfontd41d.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/intro-light-webfont.woff2") format("woff2"),
+    url("/fonts/intro-light-webfont.woff") format("woff"),
+    url("/fonts/intro-light-webfont.ttf") format("truetype"),
+    url("/fonts/intro-light-webfont.svg#intro_lightregular") format("svg");
+
+  font-weight: normal;
+
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "intro_regularregular";
+
+  src: url("/fonts/intro-regular-webfont.eot");
+
+  src: url("/fonts/intro-regular-webfontd41d.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/intro-regular-webfont.woff2") format("woff2"),
+    url("/fonts/intro-regular-webfont.woff") format("woff"),
+    url("/fonts/intro-regular-webfont.ttf") format("truetype"),
+    url("/fonts/intro-regular-webfont.svg#intro_regularregular") format("svg");
+
+  font-weight: normal;
+
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "ubuntulight";
+
+  src: url("/fonts/ubuntu-l-webfont.eot");
+
+  src: url("/fonts/ubuntu-l-webfontd41d.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/ubuntu-l-webfont.woff2") format("woff2"),
+    url("/fonts/ubuntu-l-webfont.woff") format("woff"),
+    url("/fonts/ubuntu-l-webfont.ttf") format("truetype"),
+    url("/fonts/ubuntu-l-webfont.svg#ubuntulight") format("svg");
+
+  font-weight: normal;
+
+  font-style: normal;
+  font-display: block;
+}
+
+/* Homepage styling start */
+.WhatWeComponent:first-child {
+  @apply mt-0;
+}
+.WhatWeComponent:nth-child(2n) {
+  @apply mt-[200px];
+}
+.WhatWeComponent:nth-child(2n + 1) {
+  @apply mt-[-88px];
+}
+.WhatWeComponent:nth-child(3) {
+  @apply mt-[-140px];
+}
+.WhatWeComponent:nth-child(4) {
+  @apply mt-40;
+}
+
+@media (max-width: 1280px) {
+  .WhatWeComponent:first-child,
+  .WhatWeComponent:nth-child(2n),
+  .WhatWeComponent:nth-child(2),
+  .WhatWeComponent:nth-child(2n + 1) {
+    @apply mt-0;
+  }
+}
+
+.portfolios::-webkit-scrollbar {
+  @apply hidden;
+}
+
+@layer components {
+  .imgCont-img {
+    @apply select-none pointer-events-none w-full h-full rounded-xl lg:rounded-[36px];
+  }
+}
+
+.infocont:nth-child(2) {
+  @apply bg-[#003465];
+}
+.infocont:nth-child(2) .Title {
+  @apply bg-[#003465] text-white;
+}
+.infocont:nth-child(2) .textCont {
+  @apply text-white;
+}
+.second .Title p {
+  @apply transform rotate-[0.65deg];
+}
+
+/* Homepage styling end */
+
+.protfolio_main .imgCont {
+  @apply !min-w-full w-full;
+}
+.protfolio_main a {
+  @apply !mr-0;
+}
+.portfolios .portflio_img {
+  @apply w-[83vw] sm:w-[37vw];
+}
+@media (min-width: 1920px) {
+  .desk_top {
+    @apply bg-[#003465];
+  }
+}
+/* .border_bottom {
+  position: relative;
+  line-height: 1.3em;
+} */
+
+/* .border_bottom:hover:after {
+  background-color: #eee;
+  width: 100%;
+} */
+.border_bottom:after {
+  transition: width 0.5s, background-color 1s;
+}
+.arrayBtn {
+  @apply bg-[#f9dd00] cursor-pointer  w-10 sm:w-[68px] max-sm:max-h-10 h-[68px] rounded-[50%] mt-5 sm:mt-10 
+  lg:mt-[55px] max-sm:mb-[30px] flex items-center justify-center;
+}
+
+.arrayBtn {
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+.arrayBtn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+.arrayBtn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #003465;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.arrayBtn:hover {
+  color: #fff;
+}
+
+.arrayBtn:hover:before {
+  width: 100%;
+}
+.scroll_navbar {
+  transition-delay: 0.3s;
+  transition: height 0.3s, transform 0.3s, opacity 0.2s;
+}
+.scrolling-down {
+  transform: translate3d(0, -150px, 0);
+}
+.we_work_card:nth-child(3) {
+  @apply mt-[34px] 2xl:mt-[41px];
+}
+.we_work_card:nth-child(4) {
+  @apply mt-[7px] xl:mt-[17px] 2xl:mt-[27px];
+}
+.we_work_card:nth-child(5) {
+  @apply mt-[14px] 2xl:mt-[21px];
+}
+.we_work_card:nth-child(6) {
+  @apply xl:mt-0 md:mt-[-23px];
+}
+.hero_bg_img {
+  background-image: url("/img/heroSection-bg-img.png");
+  background-repeat: repeat;
+  background-size: contain;
+}
+.how_we_work:nth-child(3) {
+  @apply lg:mt-[7px] 2xl:mt-[-22px];
+}
+.how_we_work:nth-child(4) {
+  @apply lg:mt-[7px] xl:mt-[31px] 2xl:mt-[33px];
+}
+.how_we_work:nth-child(5) {
+  @apply xl:mt-[-2px] 2xl:mt-[1px];
+}
+.how_we_work:nth-child(6) {
+  @apply xl:mt-[25px] 2xl:mt-[25px] lg:mt-[-23px];
+}
+/* Request quote styling start */
+.req_quote-label {
+  @apply text-sm md:text-[17px] text-white font-normal leading-[160%] uppercase;
+}
+.req_quote-error {
+  @apply text-[#f44336] absolute -bottom-[26px] left-[5px];
+}
+.nextBtn {
+  @apply text-xl md:text-2xl font-semibold pb-[25px] flex items-center cursor-pointer;
+}
+.nextBtI {
+  @apply bg-[#f9dd00] size-10 sm:size-12 md:size-[68px] mr-3 sm:mr-4 
+  md:mr-5 rounded-[50%] flex items-center justify-center;
+}
+/* Request quote styling end */
+
+html {
+  scroll-behavior: smooth;
+}
